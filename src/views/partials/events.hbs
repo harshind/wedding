@@ -1,0 +1,31 @@
+<!-- Event Start -->
+<div class="container-fluid py-5" id="event">
+    <div class="container py-5">
+        <div class="section-title position-relative text-center">
+            <h6 class="text-uppercase text-primary mb-3" style="letter-spacing: 3px;">Event</h6>
+            <h1 class="font-secondary display-4">Our Wedding Event</h1>
+            <i class="far fa-heart text-dark"></i>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-md-6 text-center">
+                <h5 class="font-weight-normal text-muted mb-3 pb-3">{{wedding.invite_msg}}</h5>
+            </div>
+        </div>
+        <div class="row">
+            <!--[{name:"", thumbnail:"", address: "{street:"", city:"", state:"", country: "", site:""}", start_time:"", end_time: ""}, {name:"", thumbnail:"", address: "", start_time:"", end_time: ""}]-->
+            {{#each wedding.event}}
+            <!-- border-right border-primary to add in the below div col-lg-6-->
+            <div class="col-md-6">
+                <div class="text-center text-md-left ml-md-3">
+                    <img class="img-fluid mb-4" src="{{this.thumbnail}}" alt="">
+                    <h4 class="mb-3">{{this.name}}</h4>
+                    <p class="mb-2">{{this.address.site}}, {{this.address.street}}, {{this.address.city}},
+                        {{this.address.country}}</p>
+                    <p class="mb-0">{{this.start_time}} - {{this.end_time}}</p>
+                </div>
+            </div>
+            {{/each}}
+        </div>
+    </div>
+</div>
+<!-- Event End -->
