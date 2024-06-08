@@ -16,7 +16,7 @@ const expressHbs = require("express-handlebars");
 const path = require("path");
 
 const app = express();
-
+console.log(__dirname)
 app.use("/static", express.static(path.join(__dirname, "./public")));
 // Creating HandleBars Engine
 const hbs = expressHbs.create({
@@ -61,6 +61,6 @@ app.get("*", (request, response) => {
   response.status(200).send("404, Page Not Found");
 });
 
-app.listen(8082, () => {
+app.listen(8087, () => {
   console.log("Server Up");
 });

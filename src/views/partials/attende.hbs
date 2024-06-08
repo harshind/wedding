@@ -20,11 +20,32 @@
             {{#each attende}}
             {{#if this.groomsmen }}
             <div class="col-lg-4 col-md-6 mb-4 portfolio-item first">
+                <div class="position-relative mb-2">
+                        <img class="img-fluid w-100" src="{{this.picture}}" alt="">
+                        <div class="bg-secondary text-center p-4">
+                            <h4 class="mb-3">{{this.first_name}} {{this.last_name}}</h4>
+                            <p class="text-uppercase">{{this.relation}}</p>
+                            <div class="d-inline-block">
+                                {{#if this.socialMediaHandles.twitter }}
+                                <a class="mx-2" href="#"><i class="fab fa-twitter"></i></a>
+                                {{/if}}
+                                {{#if this.socialMediaHandles.facebook }}
+                                <a class="mx-2" href="#"><i class="fab fa-facebook-f"></i></a>
+                                {{/if}}
+                                {{#if this.socialMediaHandles.linkedin }}
+                                <a class="mx-2" href="#"><i class="fab fa-linkedin-in"></i></a>
+                                {{/if}}
+                                {{#if this.socialMediaHandles.instagram }}
+                                <a class="mx-2" href="#"><i class="fab fa-instagram"></i></a>
+                                {{/if}}
+                            </div>
+                        </div>
+                    </div>
+            </div>
                 {{else}}
                 <div class="col-lg-4 col-md-6 mb-4 portfolio-item second">
-                    {{/if }}
                     <div class="position-relative mb-2">
-                        <img class="img-fluid w-100" src="{{this.img}}" alt="">
+                        <img class="img-fluid w-100" src="{{this.picture}}" alt="">
                         <div class="bg-secondary text-center p-4">
                             <h4 class="mb-3">{{this.first_name}} {{this.last_name}}</h4>
                             <p class="text-uppercase">{{this.relation}}</p>
@@ -45,8 +66,8 @@
                         </div>
                     </div>
                 </div>
+                {{/if }}
                 {{/each}}
-            </div>
         </div>
     </div>
     <!-- Friends & Family End -->

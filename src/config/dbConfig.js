@@ -5,10 +5,11 @@ const uri =
 // Create a MongoClient with a MongoClientOptions object to set the Stable API version
 const client = new MongoClient(uri, {
   serverApi: {
+    version: "1",
     deprecationErrors: false,
     useUnifiedTopology: true,
     useNewUrlParser: true,
-  },
+  }
 });
 
 async function run() {

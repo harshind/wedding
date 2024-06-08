@@ -11,6 +11,7 @@ const attendeData = [
     email: "fitzgeraldcleveland@zosis.com",
     phone: "+1 (916) 590-3542",
     registered: "2023-04-01T12:31:42 -06:-30",
+    relation: "Family",
     socialMediahandles: {
       twitter: "http://placehold.it/32x32",
       facebook: "http://placehold.it/32x32",
@@ -29,6 +30,7 @@ const attendeData = [
     email: "garnermaynard@zosis.com",
     phone: "+1 (843) 537-2520",
     registered: "2021-11-24T05:12:13 -06:-30",
+    relation: "Family",
     socialMediahandles: {
       twitter: "http://placehold.it/32x32",
       facebook: "http://placehold.it/32x32",
@@ -47,6 +49,7 @@ const attendeData = [
     email: "deannpierce@zosis.com",
     phone: "+1 (876) 432-2996",
     registered: "2015-10-25T06:54:13 -06:-30",
+    relation: "Family",
     socialMediahandles: {
       twitter: "http://placehold.it/32x32",
       facebook: "http://placehold.it/32x32",
@@ -65,6 +68,7 @@ const attendeData = [
     email: "jerimorris@zosis.com",
     phone: "+1 (952) 455-2628",
     registered: "2016-08-12T06:58:08 -06:-30",
+    relation: "Best Friend",
     socialMediahandles: {
       twitter: "http://placehold.it/32x32",
       facebook: "http://placehold.it/32x32",
@@ -83,6 +87,7 @@ const attendeData = [
     email: "jocelynsimmons@zosis.com",
     phone: "+1 (995) 464-2130",
     registered: "2015-07-06T10:20:44 -06:-30",
+    relation: "Best Friend",
     socialMediahandles: {
       twitter: "http://placehold.it/32x32",
       facebook: "http://placehold.it/32x32",
@@ -101,6 +106,7 @@ const attendeData = [
     email: "barnettheath@zosis.com",
     phone: "+1 (809) 403-3688",
     registered: "2015-04-27T04:04:17 -06:-30",
+    relation: "Best Friend",
     socialMediahandles: {
       twitter: "http://placehold.it/32x32",
       facebook: "http://placehold.it/32x32",
@@ -445,37 +451,26 @@ const weddingData = [
         },
         start_time: "",
         end_time: "",
-      },
-      {
-        name: "shadi",
-        thumbnail: "http://placehold.it/32x32",
-        address: {
-          street: "576 Chester Street",
-          city: "Talpa",
-          state: "Montana",
-          country: "Wisconsin",
-          site: "sint",
-          pincode: 191717,
-        },
-        start_time: "",
-        end_time: "",
-      },
+      }
     ],
     story: [
       {
         name: "consequat",
+        date: "2016-06-09T01:22:25 -06:-30",
         thumbnail: "http://placehold.it/32x32",
         content:
           "Ex deserunt dolore sint do incididunt ullamco ad. Quis nostrud tempor minim magna proident commodo. Ipsum sunt deserunt dolor tempor consequat magna sunt consectetur Lorem elit aute. Adipisicing adipisicing sint duis cillum est velit nostrud sint aute elit. Nulla nisi tempor dolore consectetur occaecat nostrud deserunt adipisicing cillum.\r\n",
       },
       {
         name: "sint",
+        date: "2016-06-09T01:22:25 -06:-30",
         thumbnail: "http://placehold.it/32x32",
         content:
           "Non magna veniam officia mollit aliqua deserunt occaecat elit. Duis ad enim id do duis enim et. Dolor in ea velit pariatur consectetur et quis ad est quis velit et adipisicing. Exercitation ad pariatur proident ipsum consequat irure ullamco nulla est proident incididunt voluptate. Dolor irure amet labore exercitation incididunt labore ipsum. Tempor nulla incididunt cillum sunt anim sit nostrud occaecat consequat.\r\n",
       },
       {
         name: "nisi",
+        date: "2016-06-09T01:22:25 -06:-30",
         thumbnail: "http://placehold.it/32x32",
         content:
           "In nostrud fugiat veniam sit laboris nulla tempor officia incididunt. Exercitation pariatur anim et eu. Eu pariatur fugiat duis qui velit do cupidatat. Labore occaecat cupidatat magna veniam cupidatat duis pariatur culpa pariatur. Magna aute exercitation esse voluptate. Et sit anim non laborum dolore labore ullamco culpa eiusmod do aute.\r\n",
@@ -486,7 +481,7 @@ const weddingData = [
       last_name: "Leblanc",
       description:
         "Ex tempor aliquip exercitation eu laborum laborum. Lorem sit in tempor cupidatat et enim veniam est. Culpa aliqua fugiat ut do nisi consequat officia anim ea mollit consectetur ex id nostrud. Eiusmod fugiat dolore proident officia et dolore in. Sit excepteur nostrud dolore excepteur reprehenderit ad incididunt in ea aliquip amet fugiat. Est ex dolore non consectetur consectetur sunt cillum et exercitation. Nulla eiusmod laboris sunt occaecat exercitation dolor Lorem et et.\r\n",
-      picture: "http://placehold.it/32x32",
+      picture: "http://placehold.it/200x200",
       age: 32,
       gender: "female",
       socialMediahandles: {
@@ -666,11 +661,11 @@ weddingRouter
       // const mediaData = await getMediaByWeddingId(id);
       // const attendeData = await getAttendesByWeddingId(id);
 
-      res.status(200).render("hero.hbs", {
+      res.status(200).render("home.hbs", {
         layout: "hero",
         wedding: weddingData[0],
         media: mediaData[0],
-        attende: attendeData[0],
+        attende: attendeData,
         method: "GET",
       });
     } catch (e) {
