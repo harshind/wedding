@@ -13,7 +13,8 @@
     "express-handlebars": "7.1.2",
     "faker": "4.1.0",
     "mongoose": "8.4.1",
-    "node": "20.14.0"
+    "node": "20.14.0",
+    "package.json": "^2.0.1"
   },
   "devDependencies": {
     "express": "4.19.2",
