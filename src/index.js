@@ -17,7 +17,7 @@ const path = require("path");
 
 const app = express();
 console.log(__dirname)
-app.use("/static", express.static(path.join(__dirname, "./public")));
+app.use( express.static(path.join(__dirname, "public")));
 // Creating HandleBars Engine
 const hbs = expressHbs.create({
   extname: ".hbs",
@@ -33,7 +33,7 @@ app.set("view engine", ".hbs");
 app.set("views", path.join(__dirname, "./views"));
 
 app.use(bodyParser.json());
-app.use("/api/wedding", weddingRouter);
+app.use("/", weddingRouter);
 // app.get("/:id", async (req, res) => {
 //   const { id } = req.params;
 //   try {
